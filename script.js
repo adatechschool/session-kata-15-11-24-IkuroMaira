@@ -35,6 +35,7 @@ function getLatinCharacterList([characters]) {
 
 function translateLatinCharacter(returnedLetter) {
 
+    // OLD VERSION
     // for (const [latinLetter, morse] of Object.entries(latinToMorse)) {
     //
     //     for (const letter of returnedLetter) {
@@ -63,8 +64,6 @@ function translateLatinCharacter(returnedLetter) {
             }
         }
     }
-
-
 }
 
 function encode(words) {
@@ -77,7 +76,6 @@ function encode(words) {
 
     translateLatinCharacter(charactersList);
 }
-
 
 let wordsWrite = 'Hello world';
 encode(wordsWrite);
