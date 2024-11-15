@@ -107,6 +107,7 @@ function encode(words) {
     translateLatinCharacter(charactersList);
 }
 
+// STEP 4
 function decode() {
 
 }
