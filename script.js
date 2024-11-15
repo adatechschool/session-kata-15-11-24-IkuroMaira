@@ -27,6 +27,35 @@ const latinToMorse = {
     'Z':'--..'
 }
 
+const morseToLatin = {
+    '-': "T",
+    '--': "M",
+    '---': "O",
+    '--.': "G",
+    '--.-': "Q",
+    '--..': "Z",
+    '-.': "N",
+    '-.-': "K",
+    '-.--': "Y",
+    '-.-.': "C",
+    '-..': "D",
+    '-..-': "X",
+    '-...': "B",
+    '.': "E",
+    '.-': "A",
+    '.--': "W",
+    '.---': "J",
+    '.--.': "P",
+    '.-.': "R",
+    '.-..': "L",
+    '..': "I",
+    '..-': "U",
+    '..-.': "F",
+    '...': "S",
+    '...-': "V",
+    '....': "H"
+}
+
 function getLatinCharacterList([characters]) {
     // console.log('Dans la variable charactersList', characters);
 
@@ -57,8 +86,7 @@ function translateLatinCharacter(returnedLetter) {
 
             if (latinLetter === letter) {
                 console.log(`${latinLetter} = ${morse}`);
-
-                // return morse;
+                // continue;
             } else {
                 // console.log('C\'est peut-être un espace');
             }
@@ -71,10 +99,16 @@ function encode(words) {
     let capitalLetter = [words.toUpperCase()];
     console.log(capitalLetter);
 
+    // transformer en liste dans un tableau
     let charactersList = getLatinCharacterList(capitalLetter);
     console.log(charactersList);
 
+    // On traduit en morse
     translateLatinCharacter(charactersList);
+}
+
+function decode() {
+
 }
 
 let wordsWrite = 'Hello world';
